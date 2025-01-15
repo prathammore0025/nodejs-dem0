@@ -16,6 +16,7 @@ const connectDB = async () => {
     console.log('Connected to MongoDB');
   } catch (error) {
     console.error('MongoDB connection failed:', error);
+    process.exit(1); // Exit the application if the connection fails
   }
 };
 connectDB();
@@ -25,5 +26,6 @@ app.get('/api/data', (req, res) => {
   res.json({ message: 'Hello from the backend!' });
 });
 
+// Start the server
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, '0.0.0.0', () => console.log(`Server running on http://0.0.0.0:${PORT}`));
