@@ -40,7 +40,7 @@ node server.js
 ```
 ### The backend will be available at http://localhost:5000/api/data.
 
-# ------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------
 
 # Frontend Deployment
 Clone the Frontend Repository:
